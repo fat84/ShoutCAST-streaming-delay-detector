@@ -1,4 +1,4 @@
-python-icecast-record
+Shoutcast-Recorder
 =====================
 
-This is a small python script and library that records Icecast streams
+You will need to change the Bitrate in the Shoutcast/stream-writer.py, because if you have a different bitrate, it will not work.
