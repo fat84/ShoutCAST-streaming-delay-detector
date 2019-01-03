@@ -23,7 +23,7 @@ i = 0
 
 while True:
 
-        #try:#######You can use this option, if you want to use the code before activing the server.
+        #try:#######You can use this option(Try,except), if you want to use the code before activing the server.
                 ######################Here you need to edit the link of the streaming.#################################
                 s = StreamWriter( "https://usa11.fastcast4u.com/proxy/wplpnnir", 0.5, destination="Output/", filename="output.mp3")
                 s.record()
