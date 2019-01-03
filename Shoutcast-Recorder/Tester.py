@@ -63,6 +63,7 @@ i = 0
 while True:
 
         #try:
+                ######################Here you need to edit the link of the streaming.#################################
                 s = StreamWriter( "https://usa11.fastcast4u.com/proxy/wplpnnir", 0.5, destination="Output/", filename="output.mp3")
                 s.record()
                 #pprint(s.metadata)
@@ -76,7 +77,7 @@ while True:
                 #print numeric_array
                 if sound.rms <10:
                         i = 0
-                else:
+                else:#############We add an extra delay of 1.26, because is the time that the program takes to begin the detection.
                         i = 1
                         print (i)
                         print((time.time() + 1.26) - start)
