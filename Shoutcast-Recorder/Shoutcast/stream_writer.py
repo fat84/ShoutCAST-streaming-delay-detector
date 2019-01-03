@@ -4,6 +4,8 @@ from mutagen.mp3 import MP3
 from mutagen.easyid3 import EasyID3
 from datetime import datetime
 
+
+
 class StreamWriter(object):
     """
     server_url:
@@ -28,6 +30,7 @@ class StreamWriter(object):
 
     server_url = ''
     file_size = 0.0
+    #############You will need to change the bitrate if you have another one.
     bitrate = 128.0
     stream_length = 0.0
     metadata = {}
@@ -86,4 +89,4 @@ class StreamWriter(object):
         mp3.save()
 
     def calc_length(self):
-        self.stream_length = ( ( self.file_size/1024.0 ) * 8.0 )/128.0
+        self.stream_length = ( ( self.file_size/1024.0 ) * 8.0 )/128.0  #######Here you need to change the bitrate again.
