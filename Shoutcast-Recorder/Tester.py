@@ -1,26 +1,3 @@
-##import audioop
-##import pyaudio
-##
-##chunk = 1024
-##
-##p = pyaudio.PyAudio()
-##
-##stream = p.open(format=pyaudio.paInt16,
-##                channels=1,
-##                rate=44100,
-##                input=True,
-##                frames_per_buffer=chunk)
-##
-##data = stream.read(chunk)
-##
-##rms = audioop.rms(data, 2)  #width=2 for format=paInt16
-
-#from selenium import webdriver
-#x = 0
-##from pydub import silence
-##x = silence
-
-
 
 #! /usr/bin/env python
 from Shoutcast.stream_writer import StreamWriter
@@ -39,30 +16,14 @@ import time
 import os
 import sys
 import subprocess
-##poURL = 'api.pushover.net:443'
-##apikey = 'xxxxxxxxxxxxxx'
 
-#pushover_alert################################################################
-##def Notify(poApiKey, poUserKey, poTitle, poMessage, poPriority,poSound):
-##        conn = http.client.HTTPSConnection(poURL)
-##        conn.request('POST', '/1/messages',
-##        urllib.urlencode({
-##        'token': poApiKey,
-##        'user': poUserKey,
-##        'token': poApiKey,
-##        'user': poUserKey,
-##        'title': poTitle,
-##        'message': poMessage,
-##        'priority': poPriority,
-##        'sound': poSound,
-##        }), { 'Content-type': 'application/x-www-form-urlencoded' })
 start = time.time()
 time.clock()
 i = 0
-####subprocess.Popen([r'C:\Program Files (x86)\Winamp\winamp.exe',r'C:\Users\erick\Desktop\Cosas del Escritorio\Canciones\Corazón Delator - Soda Estereo.mp3'])
+
 while True:
 
-        #try:
+        #try:#######You can use this option, if you want to use the code before activing the server.
                 ######################Here you need to edit the link of the streaming.#################################
                 s = StreamWriter( "https://usa11.fastcast4u.com/proxy/wplpnnir", 0.5, destination="Output/", filename="output.mp3")
                 s.record()
